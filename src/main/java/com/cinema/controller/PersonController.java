@@ -3,6 +3,7 @@ package com.cinema.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,6 +53,8 @@ public class PersonController {
 
 	    }
 	    
+	    @PreAuthorize("hasRole('ADMIN')")
+
 	    @PostMapping ("/createNewPerson")
 		public ResponseEntity<String> createNewPerson(@RequestBody Person person , @RequestParam Boolean isDirector ,@RequestParam Integer movie_id) {
 	    //	try {
@@ -95,7 +98,8 @@ public class PersonController {
 	    		
 	    }
 
-	    
+	    @PreAuthorize("hasRole('ADMIN')")
+
 	    @DeleteMapping  ("/deletePersonById/{id}")
 		public ResponseEntity<String> deletePersonById (@PathVariable Integer  id) {
 			personService.deletePersonById(id);
@@ -103,6 +107,7 @@ public class PersonController {
 		}
 		
 	    
+	    @PreAuthorize("hasRole('ADMIN')")
 
 	    @DeleteMapping  ("/updatePersonById/{id}")
 

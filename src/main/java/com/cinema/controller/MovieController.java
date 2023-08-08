@@ -3,6 +3,7 @@ package com.cinema.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -69,6 +70,7 @@ public class MovieController {
 	
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/createNewMovie")
 	public ResponseEntity<String> createMovie(@RequestBody Movie movie) {
     	
@@ -77,7 +79,8 @@ public class MovieController {
     	
     }
     
-    
+    @PreAuthorize("hasRole('ADMIN')")
+
     @DeleteMapping ("/deleteMovieById/{id}")
   	public ResponseEntity<String> deleteMovie(@PathVariable Integer id) {
       		movieService.deleteById(id);
@@ -85,7 +88,8 @@ public class MovieController {
       	
       }
     
-    
+    @PreAuthorize("hasRole('ADMIN')")
+
     @PutMapping ("/updateMovieById/{id}")
   	public ResponseEntity<String> updateMovieById(@PathVariable Integer id ,  @RequestBody Movie movie ) {
       	movieService.updateMovieById(movie , id);
