@@ -1,25 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import Main  from './Components/Main';
+import Card from './Components/Card';
+import CardList from './Components/CardList';
+import DeckList from './Components/DeckList';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import { GlobalProvider } from './Context/GlobalState';
+import { DeckProvider } from './Context/DeckContext';
+
+    // <GlobalProvider>
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <DeckProvider >
+
+    <div className='App'>
+
+       <Router>
+        <Main/>
+        <Routes>
+            <Route path = "/allcards" element = {<CardList/>}/>
+            {/* <Route path= "/alldecks" element = {<Deck />} /> */}
+            {/* <Route path= "/alldecks" element = {<DeckList2 />} /> */}
+            <Route path= "/alldecks" element = {<DeckList />} />
+
+
+        </Routes>
+
+      </Router> 
+
+    {/*<CardList />*/}
+    {/* <Deck /> */}
+
+
     </div>
+
+      </DeckProvider >
   );
 }
+
+    // </GlobalProvider>
 
 export default App;

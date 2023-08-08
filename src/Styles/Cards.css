@@ -1,0 +1,112 @@
+.cardComponent{
+
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+    max-width: 300px; 
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+    
+
+    
+  
+}
+
+.addToDeckButton{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 20px; 
+  height: 20px;
+  background-color: white;
+  padding :10px;
+  margin :10px;
+  text-align: center;
+
+
+
+  border-radius: 10px;
+
+
+
+}
+
+.icon {
+  /* Set the width and height to your desired icon size */
+  width: 24px;
+  height: 24px;
+}
+
+
+.cardComponent:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease-in-out; 
+}
+
+
+.cardHeader {
+    border-radius: 15px 15px 0 0;
+color : white;
+    flex:1;
+    background-color: grey;
+    font-size: 25px;
+    text-align: left; 
+
+  }
+
+  .cardHeader h3 {
+
+    padding: 10px;
+
+  }
+
+  .card-content{
+    flex-direction: column;
+
+    background-color: white;
+    flex:2;
+    text-align: left; 
+    border-radius: 0 0 15px 15px;
+
+
+  }
+
+  .card-content p{
+
+
+    flex:1;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    margin:10px;
+
+
+
+  }
+
+
+  
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+ 
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    color: #333;
+  }
+  

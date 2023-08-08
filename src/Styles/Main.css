@@ -1,0 +1,19 @@
+
+nav{
+
+margin : 20px;
+background-color: none;
+
+}
+
+#sidemenu {
+
+flex-wrap: wrap;
+}
+
+#navbuttons {
+    background-color: white ;
+    border-radius: 5px;
+
+
+}

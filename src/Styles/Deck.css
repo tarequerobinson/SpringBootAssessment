@@ -1,0 +1,135 @@
+.deckComponent{
+
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+    max-width: 300px; 
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+
+    /* margin-bottom: 20px; */
+    margin :50px;
+    
+
+    
+  
+}
+
+.deleteDeckbutton{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 20px; 
+  height: 20px;
+  background-color: white;
+  padding :10px;
+  margin :10px;
+  text-align: center;
+
+
+
+  border-radius: 10px;
+
+
+
+}
+
+.icon {
+  /* Set the width and height to your desired icon size */
+  width: 24px;
+  height: 24px;
+}
+
+
+.deckComponent:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.deckBgIcon{
+
+    float: right;
+}
+.deckHeader {
+    border-radius: 15px 15px 0 0;
+    color : white;
+    flex:1;
+    background-color: rgb(64, 163, 64);
+    font-size: 25px;
+    text-align: left; 
+
+  }
+
+  #actualCardTotal{
+
+    font-size: 70px;
+  }
+
+  
+
+  .deck-content{
+    flex-direction:row;
+    display: flex;
+
+    background-color: white;
+    flex:2;
+    text-align: left; 
+    border-radius: 0 0 15px 15px;
+
+
+  }
+
+  .deck-content p{
+
+
+    flex:1;
+    border-radius: 10px;
+    padding: 10px;
+    margin:10px;
+    float: left ;
+    text-align: right;
+
+  }
+
+
+  
+
+
+  
+
+
+  
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+ 
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    color: #333;
+  }
+
+
+  
+
+  .deckHeader.type1 {
+    background-color: rgb(64, 163, 64);
+  }
+  
+  .deckHeader.type2 {
+    background-color: rgb(252, 206, 5);
+  }
+  
+
